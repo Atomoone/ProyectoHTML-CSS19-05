@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: sandybrown;
+}   
+h1{
+   color: blue;
+}
+p{
+   color: yellow;
+}
+
+.relative {
+   position: relative;
+   top: 10px;
+   left: 120px;
+   background-color: lightblue;
+   }
