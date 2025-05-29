@@ -1,22 +1,186 @@
-<html>
-    <head>
-        <title>Mi nueva Web</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-        <dody>
-            <h1>Mi portafolio Personal v2</h1>
-            <h2>Mi portafolio Personal</h2>
-            <h3>Mi portafolio Personal</h3>
-            <p>Este es un parrafo</p>
-            <p>Este es un parrafo</p>
-            <p>Este es un parrafo</p>
-            <p>Este es un parrafo</p>
-            <div class="relative">Posicionamiento Relativo</div>
-            <p>Este es un parrafo</p>
-            <p>Este es un parrafo</p>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio</title>
+  <style>
+    /* Reset y tipografía */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; }
+    body { background: #f8f8f8; }
 
-        </dody>
-   <foot>
+    /* Contenedor principal */
+    .container { max-width: 960px; margin: auto; padding: 20px; }
 
-   </foot>
+    /* Cabecera y navegación */
+    header { background: #fff; padding: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav ul { display: flex; justify-content: center; list-style: none; }
+    nav li { margin: 0 15px; }
+    nav a { text-decoration: none; color: #333; font-weight: 500; }
+    nav a:hover { color: #007acc; }
+
+    /* Sección principal */
+    .hero { text-align: center; padding: 60px 0; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.1rem; color: #555; }
+
+    /* Pie de página */
+    footer { text-align: center; padding: 20px 0; font-size: 0.9rem; color: #777; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="portfolio.html">Portafolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Bienvenido a Mi Portafolio</h1>
+      <p>Aquí encontrarás los proyectos y habilidades que he desarrollado.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Nombre. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { font-family:'Helvetica Neue', Arial, sans-serif; color:#333; }
+    body { background:#f8f8f8; }
+    .container { max-width:960px; margin:auto; padding:20px; }
+    header, footer { background:#fff; padding:15px 0; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+    nav ul { display:flex; justify-content:center; list-style:none; }
+    nav li { margin:0 15px; }
+    nav a { text-decoration:none; color:#333; font-weight:500; }
+    nav a:hover { color:#007acc; }
+    section { margin-top:30px; }
+    h1 { margin-bottom:20px; font-size:2rem; text-align:center; }
+    ul { list-style: none; }
+    li { background:#fff; margin-bottom:15px; padding:15px; border-left:4px solid #007acc; }
+    li h2 { font-size:1.25rem; margin-bottom:5px; }
+    li p { color:#555; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="portfolio.html">Portafolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Mis Proyectos y Habilidades</h1>
+      <ul>
+        <li>
+          <h2>Proyecto Web React</h2>
+          <p>Desarrollé una SPA moderna usando React, React Router y TailwindCSS.</p>
+        </li>
+        <li>
+          <h2>Aplicación Móvil Flutter</h2>
+          <p>Creé una app cross-platform con Flutter y Firebase para gestión de tareas.</p>
+        </li>
+        <li>
+          <h2>API REST en Node.js</h2>
+          <p>Implementé un backend RESTful con Express, MongoDB y JWT para autenticación.</p>
+        </li>
+        <li>
+          <h2>Análisis de Datos con Python</h2>
+          <p>Realicé análisis y visualización de datos usando pandas y matplotlib.</p>
+        </li>
+        <!-- Agrega más ítems según tu experiencia -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Nombre. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+<!-- contacto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { font-family:'Helvetica Neue', Arial, sans-serif; color:#333; }
+    body { background:#f8f8f8; }
+    .container { max-width:600px; margin:40px auto; padding:20px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    header, footer { text-align:center; }
+    header nav ul { display:flex; justify-content:center; list-style:none; margin-bottom:20px; }
+    header nav li { margin:0 15px; }
+    header nav a { text-decoration:none; color:#333; font-weight:500; }
+    header nav a:hover { color:#007acc; }
+    h1 { margin-bottom:20px; }
+    form label { display:block; margin-bottom:5px; font-weight:500; }
+    form input, form textarea { width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px; }
+    form button { padding:10px 20px; border:none; background:#007acc; color:#fff; font-size:1rem; border-radius:4px; cursor:pointer; }
+    form button:hover { background:#005fa3; }
+    footer { margin-top:40px; font-size:0.9rem; color:#777; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="portfolio.html">Portafolio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Contáctame</h1>
+    <form action="#" method="post">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo Electrónico</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Mi Nombre. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
