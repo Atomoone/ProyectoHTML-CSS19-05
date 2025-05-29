@@ -1,29 +1,48 @@
-<!-- contact.php -->
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nombre = htmlspecialchars(trim($_POST['nombre']));
-    $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
-    $mensaje = htmlspecialchars(trim($_POST['mensaje']));
+<!-- Archivo: contacto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Mi Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background"></div>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="portfolio.html">Portafolio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="testimonios.html">Testimonios</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Contáctame</h1>
+    <form action="contact.php" method="POST">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" required>
 
-    if (!$nombre || !$email || !$mensaje) {
-        echo 'Por favor completa todos los campos.';
-        exit;
-    }
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email" required>
 
-    $destinatario = 'tuemail@dominio.com'; // Cambia por tu correo
-    $asunto = 'Nuevo mensaje de contacto de ' . $nombre;
-    $cuerpo = "Nombre: $nombre\nEmail: $email\n\nMensaje:\n$mensaje";
-    $headers = "From: $nombre <$email>" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
 
-    if (mail($destinatario, $asunto, $cuerpo, $headers)) {
-        echo '<p class="status">Gracias, tu mensaje ha sido enviado correctamente.</p>';
-    } else {
-        echo '<p class="status">Lo siento, hubo un error al enviar tu mensaje. Inténtalo más tarde.</p>';
-    }
-} else {
-    header('Location: contacto.html');
-    exit;
-}
-?>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </main>
+</body>
+</html>
+
+
+  <footer>
+    <p>&copy; 2025 Mi Nombre. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
