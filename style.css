@@ -101,4 +101,21 @@ form button { cursor: pointer; border: none; }
   .navbar ul { flex-direction: column; }
 }
 
-/* PHP: contact.php (guardado por separado) */
+.linkedin{
+  width: 40px;
+  height: 40px;
+  background-color: #0e76a8;
+  border-radius: 10px;
+  margin: 100px auto;
+}
+
+.linkedin::after {
+  content: "in";
+  font-size: 500;
+  color: white;
+  font-family: "roboto";
+  display: block;
+  text-align: center;
+
+
+}
