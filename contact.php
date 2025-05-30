@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $destinatario = 'tuemail@dominio.com'; // Cambia por tu correo
+    $destinatario = 'mora.pabloesteban@gmail.com'; // Cambia por tu correo
     $asunto = 'Nuevo mensaje de contacto de ' . $nombre;
     $cuerpo = "Nombre: $nombre\nEmail: $email\n\nMensaje:\n$mensaje";
     $headers = "From: $nombre <$email>" . "\r\n" .
