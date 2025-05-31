@@ -9,6 +9,8 @@
 </head>
 <body>
   <div class="background"></div>
+
+  <!-- ================= HEADER / NAVEGACIÓN ================= -->
   <header>
     <nav class="navbar">
       <ul>
@@ -21,24 +23,164 @@
       </ul>
     </nav>
   </header>
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
   <main class="container">
     <h1>Servicios</h1>
     <ul class="services-list">
-      <li>Desarrollo Front-end</li>
-      <li>Desarrollo Back-end</li>
-      <li>Diseño UI/UX</li>
-      <li>Consultoría Técnica</li>
-      <li>Soporte Ofimatica</li>
-      <li>Adminitrador de BDD</li>
-      <li>Reparacion de Equipos</li>     
-      <li>Asesoria Técnica</li>  
+      <!-- Servicio 1 -->
+      <li class="service-item">
+        <div class="service-header">Desarrollo Front-end</div>
+        <div class="service-detail">
+          <p>
+            Creamos interfaces interactivas y responsivas usando tecnologías
+            modernas (HTML5, CSS3, JavaScript, React, etc.). Optimización de
+            experiencia de usuario y rendimiento en el navegador.
+          </p>
+          <img
+            src="/imagen/front-end.jpg"
+            alt="Captura de pantalla de proyecto Front-end"
+          />
+        </div>
+      </li>
+
+      <!-- Servicio 2 -->
+      <li class="service-item">
+        <div class="service-header">Desarrollo Back-end</div>
+        <div class="service-detail">
+          <p>
+            Implementación de lógica de servidor, APIs RESTful, bases de datos
+            relacionales y no relacionales. Aseguramos seguridad, escalabilidad
+            y rendimiento en el servidor.
+          </p>
+          <img
+            src="/imagen/backend2.jpg"
+            alt="Diagrama de arquitectura Back-end"
+          />
+        </div>
+      </li>
+
+      <!-- Servicio 3 -->
+      <li class="service-item">
+        <div class="service-header">Diseño UI/UX</div>
+        <div class="service-detail">
+          <p>
+            Diseño centrado en el usuario: wireframes, prototipos y mockups.
+            Investigación de usuario, pruebas de usabilidad y sistemas de
+            diseño consistentes.
+          </p>
+          <img
+            src="/imagen/uxui.jpg"
+            alt="Mockup de interfaz de usuario"
+          />
+        </div>
+      </li>
+
+      <!-- Servicio 4 -->
+      <li class="service-item">
+        <div class="service-header">Consultoría Técnica</div>
+        <div class="service-detail">
+          <p>
+            Asesoramiento en arquitectura de software, selección de tecnologías
+            y mejores prácticas de desarrollo. Revisión de código y auditorías
+            de seguridad.
+          </p>
+          <img
+            src="/imagen/consulta.jpg"
+            alt="Reunión de consultoría técnica"
+          />
+        </div>
+      </li>
+
+      <!-- Servicio 5 -->
+      <li class="service-item">
+        <div class="service-header">Soporte Ofimático</div>
+        <div class="service-detail">
+          <p>
+            Instalación, configuración y resolución de problemas en suites
+            ofimáticas (Office, Google Workspace). Automación de tareas con
+            macros y plantillas personalizadas.
+          </p>
+          <img
+            src="/imagen/ofimaticar.jpg"
+            alt="Pantalla con software ofimático"
+          />
+        </div>
+      </li>
+
+      <!-- Servicio 6 -->
+      <li class="service-item">
+        <div class="service-header">Administrador de BDD</div>
+        <div class="service-detail">
+          <p>
+            Diseño, implementación y mantenimiento de bases de datos SQL (MySQL,
+            PostgreSQL) y NoSQL (MongoDB). Respaldo, recuperación y optimización
+            de consultas.
+          </p>
+          <img
+            src="/imagen/bdd.jpg"
+            alt="Esquema ER de base de datos"
+          />
+        </div>
+      </li>
+
+      <!-- Servicio 7 -->
+      <li class="service-item">
+        <div class="service-header">Reparación de Equipos</div>
+        <div class="service-detail">
+          <p>
+            Diagnóstico y reparación de hardware en PCs y notebooks. Reemplazo
+            de componentes, formateo y reinstalación de sistemas operativos.
+          </p>
+          <img
+            src="/imagen/reparacion.jpg"
+            alt="Técnico reparando un computador"
+          />
+        </div>
+      </li>
+
+      <!-- Servicio 8 -->
+      <li class="service-item">
+        <div class="service-header">Asesoría Técnica</div>
+        <div class="service-detail">
+          <p>
+            Orientación en compra de hardware, configuración de redes, y
+            soluciones integrales para pequeñas y medianas empresas. Soporte
+            remoto y presencial.
+          </p>
+          <img
+            src="/imagen/asesoria.jpg"
+            alt="Asesor brindando soporte técnico"
+          />
+        </div>
+      </li>
     </ul>
   </main>
-</body>
-<footer>
+
+  <!-- ================= PIE DE PÁGINA ================= -->
+  <footer>
     <p>&copy; 2025 Pablo E. Mora González. Todos los derechos reservados.</p>
   </footer>
-</html>
-<html>
+
+  <!-- ---------------------------------------------------------
+       5) JavaScript para alternar (toggle) los detalles
+       --------------------------------------------------------- -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Seleccionamos todos los elementos que tienen la clase 'service-item'
+      const servicios = document.querySelectorAll(".service-item");
+
+      servicios.forEach((item) => {
+        // Cuando hacen click en el ítem completo (o podrías limitarlo solo a .service-header),
+        // alternamos la clase 'expanded' en el elemento padre (.service-item).
+        item.addEventListener("click", () => {
+          item.classList.toggle("expanded");
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
+
+
