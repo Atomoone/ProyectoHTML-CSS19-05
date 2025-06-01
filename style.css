@@ -37,10 +37,10 @@ html, body { height: 100%; font-family: 'Helvetica Neue', Arial, sans-serif; }
 
 
 /*Contenedor principal con fondo blanco y bordes redondeados */
-.container { max-width: 960px; margin: 100px auto 50px; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 8px; }
+.container { max-width: 950px; margin: 100px auto 50px; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 8px; }
 /* Sección principal (hero) */
-.hero { text-align: center; padding: 60px 0; }
-.hero h1 { font-size: 2.5rem; margin-bottom: 15px; color: #007acc; }
+.hero { text-align: center; padding: 50px 0; }
+.hero h1 { font-size: 2.0rem; margin-bottom: 5px; color: #007acc; }
 .hero p { font-size: 1.1rem; color: #555; }
 
 
