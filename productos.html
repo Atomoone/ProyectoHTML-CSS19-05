@@ -1,174 +1,119 @@
-<!-- Archivo: productos.html -->
-  <!DOCTYPE html>
-  <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Mi Portafolio</title>
-    <link rel="stylesheet" href="/CSS/servicios.css">
-  </head>
-  <body>
-    <div class="background"></div>
-
-    <!-- ================= HEADER / NAVEGACIÓN ================= -->
-    <header>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sobre-mi.html">Sobre mí</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="productos.html" class="active">Poductos</a></li>
-          <li><a href="testimonios.html">Testimonios</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- ================= CONTENIDO PRINCIPAL ================= -->
-    <!-- link js -->
-    <script src="app.js"></script>
-</body>
-<style>
-    .contenedor-productos {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-      gap: 20px;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .producto {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-      background-color: #f8f8f8;
-      border-radius: 10px;
-    }
-
-    .producto img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .producto h3 {
-      margin: 10px 0 5px;
-    }
-
-    .producto p {
-      margin: 0;
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Mi Portafolio</title>
+  <link rel="stylesheet" href="/CSS/servicios.css">
 </head>
 <body>
-<main class="container">
-  <h1 style="text-align:center;"> Productos</h1>
+  <div class="background"></div>
 
-  <div class="contenedor-productos">
-    <!-- Producto 1 -->
-    <div class="producto">
-      <img src="/imagen/iphone.png" alt="iPhone">
-      <h3>iPhone 15</h3>
-      <br>
-      <p>$800.999</p>
-      <button onclick="agregarAlCarrito('iPhone 15', 800999)">Agregar al Carrito</button>
-    </div>
+  <!-- ================= HEADER / NAVEGACIÓN ================= -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="portfolio.html">Portafolio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="productos.html" class="active">Productos</a></li>
+        <li><a href="testimonios.html">Testimonios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Producto 2 -->
-    <div class="producto">
-      <img src="imagen/AppleWatch.png" alt="Apple Watch">
-      <h3>Apple Watch</h3>
-      <br>
-      <p>$350.000</p>
-      <button onclick="agregarAlCarrito('Apple Watch', 350000)">Agregar al Carrito</button>
-    </div>
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+  <main class="container-principal">
+    <section class="productos">
+      <h1 style="text-align:center;">Productos</h1>
+      <div class="contenedor-productos">
+        <!-- Producto 1 -->
+        <div class="producto">
+          <img src="/imagen/iphone.png" alt="iPhone">
+          <h3>iPhone 15</h3>
+          <p>$800.999</p>
+          <button onclick="agregarAlCarrito('iPhone 15', 800999)">Agregar al Carrito</button>
+        </div>
 
-    <!-- Producto 3 -->
-    <div class="producto">
-      <img src="imagen/mando.jpg" alt="Xbox Controller">
-      <h3>Mando Xbox One</h3>
-      <p>$65.000</p>
-      <button onclick="agregarAlCarrito('Xbox Controller', 65000)">Agregar al Carrito</button>
-    </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+          <img src="/imagen/AppleWatch.png" alt="Apple Watch">
+          <h3>Apple Watch</h3>
+          <p>$350.000</p>
+          <button onclick="agregarAlCarrito('Apple Watch', 350000)">Agregar al Carrito</button>
+        </div>
 
-    <!-- Producto 4 -->
-    <div class="producto">
-      <img src="/imagen/note20.png" alt="Samsung S24">
-      <h3>Galaxy S24 Ultra</h3>
-      <p>$900.000</p>
-      <button onclick="agregarAlCarrito('Samsung S24', 900000)">Agregar al Carrito</button>
-    </div>
+        <!-- Producto 3 -->
+        <div class="producto">
+          <img src="/imagen/mando.jpg" alt="Mando Xbox">
+          <h3>Mando Xbox One</h3>
+          <p>$65.000</p>
+          <button onclick="agregarAlCarrito('Mando Xbox', 65000)">Agregar al Carrito</button>
+        </div>
 
-    <!-- Producto 5 -->
-    <div class="producto">
-      <img src="/imagen/sony.webp" alt="Auriculares">
-      <h3>Auriculares Sony</h3>
-      <p>$70.500</p>
-      <button onclick="agregarAlCarrito('Auriculares', 70500)">Agregar al Carrito</button>
-    </div>
+        <!-- Producto 4 -->
+        <div class="producto">
+          <img src="/imagen/note20.png" alt="Galaxy S24 Ultra">
+          <h3>Galaxy S24 Ultra</h3>
+          <p>$900.000</p>
+          <button onclick="agregarAlCarrito('Galaxy S24 Ultra', 900000)">Agregar al Carrito</button>
+        </div>
 
-    <!-- Producto 6 -->
-    <div class="producto">
-      <img src="/imagen/notebook.jpg" alt="Notebook Lenovo">
-      <h3>Notebook Lenovo</h3>
-      <p>$600.000</p>
-      <button onclick="agregarAlCarrito('Notebook Lenovo', 600000)">Agregar al Carrito</button>
-    </div>
+        <!-- Producto 5 -->
+        <div class="producto">
+          <img src="/imagen/sony.webp" alt="Auriculares Sony">
+          <h3>Auriculares Sony</h3>
+          <p>$70.500</p>
+          <button onclick="agregarAlCarrito('Auriculares Sony', 70500)">Agregar al Carrito</button>
+        </div>
 
-    <!-- Producto 7 -->
-    <div class="producto">
-      <img src="/imagen/impresoraHP.jpg" alt="Impresora HP">
-      <h3>Impresora HP</h3>
-      <br>
-      <p>$250.990</p>
-      <button onclick="agregarAlCarrito('Impresora HP', 250990)">Agregar al Carrito</button>
-    </div>
+        <!-- Producto 6 -->
+        <div class="producto">
+          <img src="/imagen/notebook.jpg" alt="Notebook Lenovo">
+          <h3>Notebook Lenovo</h3>
+          <p>$600.000</p>
+          <button onclick="agregarAlCarrito('Notebook Lenovo', 600000)">Agregar al Carrito</button>
+        </div>
 
-    <!-- Producto 8 -->
-    <div class="producto">
-      <img src="/imagen/tablet.jpg" alt="Tablet Samsung">
-      <h3>Tablet Samsung</h3>
-      <br>
-      <p>$100.000</p>
-      <button onclick="agregarAlCarrito('Tablet Samsung', 100000)">Agregar al Carrito</button>
-    </div>
-  </div>
+        <!-- Producto 7 -->
+        <div class="producto">
+          <img src="/imagen/impresoraHP.jpg" alt="Impresora HP">
+          <h3>Impresora HP</h3>
+          <p>$250.990</p>
+          <button onclick="agregarAlCarrito('Impresora HP', 250990)">Agregar al Carrito</button>
+        </div>
 
-<!----
-<section class="carrito-section">
-  <h2>Carrito de Compras</h2>
-  <ul id="carrito-lista"></ul>
-  <p id="total">Total: $0</p>
-  <button onclick="finalizarCompra()">Finalizar Compra</button>
-</section>
-</main> -->
+        <!-- Producto 8 -->
+        <div class="producto">
+          <img src="/imagen/tablet.jpg" alt="Tablet Samsung">
+          <h3>Tablet Samsung</h3>
+          <p>$100.000</p>
+          <button onclick="agregarAlCarrito('Tablet Samsung', 100000)">Agregar al Carrito</button>
+        </div>
+      </div>
+    </section>
 
-<main class="container-principal">
-  <div class="contenedor-productos">
-    <!-- Productos (como ya los tienes)... -->
-  </div>
+    <!-- ================= CARRITO ================= -->
+    <section class="carrito-section">
+      <h2>Carrito de Compras</h2>
+      <ul id="carrito-lista"></ul>
+      <p id="subtotal">Subtotal: $0</p>
+      <p id="iva">IVA (19%): $0</p>
+      <p id="total">Total: $0</p>
+      <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+  </main>
 
-  <section class="carrito-section">
-    <h2>Carrito de Compras</h2>
-    <ul id="carrito-lista"></ul>
-    <p id="subtotal">Subtotal: $0</p>
-    <p id="iva">IVA (19%): $0</p>
-    <p id="total">Total: $0</p>
-    <button onclick="finalizarCompra()">Finalizar Compra</button>
-  </section>
-</main>
+  <!-- ================= PIE DE PÁGINA ================= -->
+  <footer>
+    <p>&copy; 2025 Pablo E. Mora González. Todos los derechos reservados.</p>
+  </footer>
 
-
-
-    <!-- ---------------------------------------------------------
-        5) JavaScript para alternar (toggle) los detalles
-        --------------------------------------------------------- -->
-    <script src="/JS/servicios.js"></script>
-    <script src="/JS/carrito.js"></script>
-  
-    <!-- ================= PIE DE PÁGINA ================= -->
-<footer>
-      <p>&copy; 2025 Pablo E. Mora González. Todos los derechos reservados.</p>
-</footer>
+  <!-- ================= SCRIPTS ================= -->
+  <script src="/JS/carrito.js"></script>
+  <script src="/JS/servicios.js"></script>
+</body>
 </html>
+
