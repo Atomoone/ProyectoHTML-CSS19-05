@@ -90,7 +90,7 @@ function finalizarCompra() {
     alert('El carrito está vacío.');
     return;
   }
-  alert('Compra finalizada. Gracias por su compra.');
+  alert('Redirigiendo a Webpay... (simulado)');
   carrito = [];
   actualizarCarrito();
 }
