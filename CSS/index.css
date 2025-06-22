@@ -78,12 +78,14 @@ footer {
 /* ---------------------------------------------------------
        1) Estilos básicos de la página y layout
        --------------------------------------------------------- */
-    body {
+    
+    /*  body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #222121;
       color: #181717;
     }
+    */
     header {
       background-color: #ffffff;
       padding: 10px 0;
