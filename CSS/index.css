@@ -1,31 +1,48 @@
-/* Reset general: elimina márgenes y rellenos por defecto, y establece box-sizing */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-/* Define altura completa y fuente predeterminada para html y body */
-html, body { height: 100%; font-family: 'Helvetica Neue', Arial, sans-serif; }
+/* ================= RESET Y FUENTE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-/* Fondo animado de la página */
+/* ================= FONDO ANIMADO ================= */
 .background {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('/imagen/fondo2.jpg') no-repeat center center; 
+  background: url('/imagen/fondo2.jpg') no-repeat center center;
   background-size: cover;
   animation: moverFondo 30s linear infinite;
   z-index: -1;
 }
-/* Animación del fondo que se desplaza horizontalmente */
 @keyframes moverFondo {
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 0%; }
 }
 
-/* Barra de navegación */
-.navbar ul { display: flex; justify-content: center; list-style: none; background: rgba(255,255,255,0.8); }
-.navbar li { margin: 0 15px; }
+/* ================= NAVBAR ================= */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: rgba(255,255,255,0.8);
+  padding: 10px 0;
+}
+.navbar li {
+  margin: 0 15px;
+}
 .navbar a {
-  text-decoration: none;  color: #333;
+  text-decoration: none;
+  color: #333;
   font-weight: 500;
   padding: 10px 15px;
-  transition: background 0.3s, transform 0.3s;  
+  transition: background 0.3s, transform 0.3s;
 }
 .navbar a:hover, .navbar a.active {
   background: #007acc;
@@ -33,17 +50,32 @@ html, body { height: 100%; font-family: 'Helvetica Neue', Arial, sans-serif; }
   transform: scale(1.05);
 }
 
+/* ================= CONTENEDOR PRINCIPAL ================= */
+.container {
+  max-width: 950px;
+  margin: 100px auto 50px;
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  flex: 1;
+}
 
+/* ================= SECCIÓN HERO ================= */
+.hero {
+  text-align: center;
+  padding: 50px 0;
+}
+.hero h1 {
+  font-size: 2.0rem;
+  margin-bottom: 5px;
+  color: #007acc;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
 
-
-/*Contenedor principal con fondo blanco y bordes redondeados */
-.container { max-width: 950px; margin: 100px auto 50px; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 8px; }
-/* Sección principal (hero) */
-.hero { text-align: center; padding: 50px 0; }
-.hero h1 { font-size: 2.0rem; margin-bottom: 5px; color: #007acc; }
-.hero p { font-size: 1.1rem; color: #555; }
-
-
+/* ================= BOTONES ================= */
 .btn {
   display: inline-block;
   padding: 12px 25px;
@@ -52,53 +84,51 @@ html, body { height: 100%; font-family: 'Helvetica Neue', Arial, sans-serif; }
   font-weight: 500;
   transition: transform 0.3s;
 }
-
-/* Botón general */
 .btn-primary {
   background: #007acc;
   color: #fff;
-  
-/* Botón con estilo principal */
 }
 .btn-primary:hover {
   transform: scale(1.1);
 }
-/* Galería de imágenes en grid */
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-/*.gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 10px 0;
-}*/
 
-Estilo individual de cada item en la galería 
+/* ================= GALERÍA ================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
 .gallery-item {
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
- /* .gallery-item {
-  flex: 0 0 auto;
-  width: 250px;
-  overflow: hidden;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}*/
+.gallery-item:hover {
+  transform: scale(1.0);
+}
+.gallery-item img {
+  width: 80%;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+.gallery-item .description {
+  padding: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
 
-/* Efecto al pasar el cursor por una imagen */
-
-.gallery-item:hover { transform: scale(1.0); }
-.gallery-item img { width: 80%; display: block; }
-
-/* Descripción debajo de cada imagen */
-.gallery-item .description { padding: 10px; font-size: 0.95rem; color: #333; }
-/* Lista de servicios como grid de 2 columnas */
-.services-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+/* ================= SERVICIOS ================= */
+.services-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
 .services-list li {
   background: #fff;
   padding: 15px;
@@ -106,8 +136,11 @@ Estilo individual de cada item en la galería
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
-.services-list li:hover { transform: translateY(-5px); }
-/* Caja de testimonios */
+.services-list li:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= TESTIMONIOS ================= */
 .testimonial {
   background: #fff;
   padding: 20px;
@@ -115,75 +148,50 @@ Estilo individual de cada item en la galería
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   margin-bottom: 20px;
   transition: background 0.3s;
-  
-/* Cambio de fondo al pasar el cursor */
 }
-.testimonial:hover { background: #f0f8ff; }
-/* Estilos del formulario */
-form { display: flex; flex-direction: column; }
-form label { margin-bottom: 5px; font-weight: 500; }
+.testimonial:hover {
+  background: #f0f8ff;
+}
 
-
-form input, form textarea {
+/* ================= FORMULARIO ================= */
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+form input,
+form textarea {
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: border-color 0.3s;
 }
-/* Enfocar campos del formulario */
-form input:focus, form textarea:focus { border-color: #007acc; outline: none; }
-
-/* Estilo del botón de envío */
-form button { cursor: pointer; border: none; }
-
-/* Ajustes responsivos para pantallas pequeñas */
-@media(max-width: 600px) {
-  .services-list { grid-template-columns: 1fr; }
-  .navbar ul { flex-direction: column; }
+form input:focus,
+form textarea:focus {
+  border-color: #007acc;
+  outline: none;
 }
-/* Botón o icono de LinkedIn personalizado */
-.linkedin{
-  width: 40px;
-  height: 40px;
-  background-color: #0e76a8;
-  border-radius: 10px;
-  margin: 100px auto;
-}
-/* Agrega texto "in" dentro del cuadro de LinkedIn */
-.linkedin::after {
-  content: "in";
-  font-size: 500;
-  color: white;
-  font-family: "roboto";
-  display: block;
-  text-align: center;
-
-
-}
-/* Transición en imágenes dentro de la galería */
-.gallery-item img {
-  transition: transform 0.3s ease;
+form button {
   cursor: pointer;
+  border: none;
 }
 
-/* Escala adicional al pasar el mouse sobre una imagen */
-.gallery-item img:hover {
-  transform: scale(1.1);
-}
-
-/* Modal oculto por defecto */
+/* ================= MODAL ================= */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
   padding-top: 80px;
   left: 0; top: 0;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.8);
 }
-/* Contenido del modal (imagen ampliada, por ejemplo) */
 .modal-content {
   margin: auto;
   display: block;
@@ -191,7 +199,6 @@ form button { cursor: pointer; border: none; }
   max-height: 80vh;
   border-radius: 10px;
 }
-/* Botón para cerrar el modal */
 .close {
   position: absolute;
   top: 30px;
@@ -201,150 +208,43 @@ form button { cursor: pointer; border: none; }
   font-weight: bold;
   cursor: pointer;
 }
-
 .close:hover {
   color: #ccc;
 }
 
-
-
-    /* ---------------------------------------------------------
-       1) Estilos básicos de la página y layout
-       --------------------------------------------------------- */
- 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #222121;
-      color: #181717;
-    }
-    header {
-      background-color: #ffffff;
-      padding: 10px 0;
-    }
-    .navbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    .navbar li {
-      margin: 0 15px;
-    }
-    .navbar a {
-      color: #000000;
-      text-decoration: none;
-      font-weight: normal;
-    }
-    .navbar a.active,
-    .navbar a:hover {
-      text-decoration: underline;
-    }
-    main.container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    main.container h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    /* ---------------------------------------------------------
-       2) Lista de servicios como “botones”
-       --------------------------------------------------------- */
-    .services-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .service-item {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      margin-bottom: 15px;
-      overflow: hidden;
-      cursor: pointer;
-      background-color: #fafafa;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    /* Efecto hover: ligero lift y sombra */
-    .service-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-    /* Contenedor visible con el nombre del servicio */
-    .service-header {
-      padding: 15px 20px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      background-color: #eaeaea;
-    }
-    /* Icono de flecha para indicar expandir/colapsar */
-    .service-header::after {
-      content: "▸";
-      margin-left: auto;
-      transition: transform 0.3s;
-    }
-    /* Cuando esté expandido, rotar la flecha */
-    .service-item.expanded .service-header::after {
-      transform: rotate(90deg);
-    }
-
-    /* ---------------------------------------------------------
-       3) Detalles ocultos: comentario + imagen
-       --------------------------------------------------------- */
-    .service-detail {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      background-color: #fff;
-    }
-    /* Cuando .expanded está presente, mostramos el contenido */
-    .service-item.expanded .service-detail {
-      max-height: 500px; /* suficiente para el contenido, ajústalo si hace falta */
-      padding: 15px 20px;
-    }
-    .service-detail p {
-      margin: 0 0 10px 0;
-      line-height: 1.5;
-    }
-    .service-detail img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      display: block;
-    }
-
-    /* ---------------------------------------------------------
-       4) Estilos de footer
-       ---------------------------------------------------------*/ 
-    footer {
-      text-align: center;
-      padding: 15px 0;
-      background-color: #f9f5f5;
-      color: #1e1d1d;
-      margin-top: 30px;
-    }
-/* Para que el body ocupe toda la altura */
-html, body {
-  height: 100%;
-  margin: 0;
+/* ================= LINKEDIN ================= */
+.linkedin {
+  width: 40px;
+  height: 40px;
+  background-color: #0e76a8;
+  border-radius: 10px;
+  margin: 100px auto;
 }
-    
-/* Usamos flexbox para el body */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* altura total de la ventana */
+.linkedin::after {
+  content: "in";
+  font-size: 20px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  text-align: center;
+  line-height: 40px;
 }
 
-/* El main ocupa todo el espacio restante */
-main.container {
-  flex: 1;
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #f9f5f5;
+  color: #1e1d1d;
+  margin-top: 30px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
 }
