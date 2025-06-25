@@ -212,7 +212,7 @@ form button { cursor: pointer; border: none; }
        1) Estilos básicos de la página y layout
        --------------------------------------------------------- */
 
-       
+      /* 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
