@@ -2,13 +2,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto - Mi Portafolio</title>
-  <link rel="stylesheet" href="CSS/contacto.css">
+  <link rel="stylesheet" href="CSS/contacto.css" />
 </head>
 <body>
+  <!-- Fondo animado -->
   <div class="background"></div>
+
+  <!-- Navegación -->
   <header>
     <nav class="navbar">
       <ul>
@@ -22,104 +25,78 @@
       </ul>
     </nav>
   </header>
-  
+
+  <!-- Formulario de contacto -->
   <section class="contacto">
-  <h2>Contáctame</h2>
-  <form action="contact.php" method="POST">
-    
-    <label for="nombre">Nombre completo</label>
-    <input type="text" name="nombre" id="nombre" required minlength="3" placeholder="Ej: Juan Pérez">
-
-    <label for="email">Correo electrónico</label>
-    <input type="email" name="email" id="email" required placeholder="Ej: ejemplo@correo.com">
-
-    <label for="telefono">Teléfono</label>
-    <input type="tel" name="telefono" id="telefono" required pattern="[0-9]{9}" placeholder="Ej: 912345678">
-<br>
-<br>
-    <label for="asunto">Asunto</label>
-    <input type="text" name="asunto" id="asunto" required minlength="5" placeholder="Ej: Consulta sobre servicios">
-
-    <label for="edad">Edad</label>
-    <input type="number" name="edad" id="edad" required min="18" max="100" placeholder="Ej: 30">
-
-    <label for="genero">Género</label>
-    <select name="genero" id="genero" required>
-      <option value="" disabled selected>Seleccione</option>
-      <option value="masculino">Masculino</option>
-      <option value="femenino">Femenino</option>
-      <option value="otro">Otro</option>
-      <option value="prefiero-no-decir">Prefiero no decir</option>
-    </select>
-    <br>
-<br>
-    <label for="pais">País</label>
-    <input type="text" name="pais" id="pais" required placeholder="Ej: Chile">
-
-    <label for="contacto">¿Cómo prefieres ser contactado?</label>
-    <select name="contacto" id="contacto" required>
-      <option value="" disabled selected>Seleccione una opción</option>
-      <option value="email">Correo electrónico</option>
-      <option value="telefono">Teléfono</option>
-      <option value="whatsapp">WhatsApp</option>
-    </select>
-    <br>
-<br>
-    <label for="fecha">Fecha preferida para contacto</label>
-    <input type="date" name="fecha" id="fecha" required>
-<br>
-<br>
-    <label for="mensaje">Mensaje</label>
-    <textarea name="mensaje" id="mensaje" rows="5" required minlength="10" placeholder="Escribe tu mensaje..."></textarea>
-
-    <label>
-      <input type="checkbox" name="terminos" required> Acepto los términos y condiciones.
-    </label>
-
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </form>
-</section>
-
-<!---
     <h2>Contáctame</h2>
     <form action="contact.php" method="POST">
-      <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" id="nombre" required>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" name="nombre" id="nombre" required minlength="3" placeholder="Ej: Juan Pérez" />
 
       <label for="email">Correo electrónico</label>
-      <input type="email" name="email" id="email" required>
+      <input type="email" name="email" id="email" required placeholder="Ej: ejemplo@correo.com" />
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" name="telefono" id="telefono" required pattern="[0-9]{9}" placeholder="Ej: 912345678" />
+
+      <label for="asunto">Asunto</label>
+      <input type="text" name="asunto" id="asunto" required minlength="5" placeholder="Ej: Consulta sobre servicios" />
+
+      <label for="edad">Edad</label>
+      <input type="number" name="edad" id="edad" required min="18" max="100" placeholder="Ej: 30" />
+
+      <label for="genero">Género</label>
+      <select name="genero" id="genero" required>
+        <option value="" disabled selected>Seleccione</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+        <option value="prefiero-no-decir">Prefiero no decir</option>
+      </select>
+
+      <label for="pais">País</label>
+      <input type="text" name="pais" id="pais" required placeholder="Ej: Chile" />
+
+      <label for="contacto">¿Cómo prefieres ser contactado?</label>
+      <select name="contacto" id="contacto" required>
+        <option value="" disabled selected>Seleccione una opción</option>
+        <option value="email">Correo electrónico</option>
+        <option value="telefono">Teléfono</option>
+        <option value="whatsapp">WhatsApp</option>
+      </select>
+
+      <label for="fecha">Fecha preferida para contacto</label>
+      <input type="date" name="fecha" id="fecha" required />
 
       <label for="mensaje">Mensaje</label>
-      <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
-    
-      <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
+      <textarea name="mensaje" id="mensaje" rows="5" required minlength="10" placeholder="Escribe tu mensaje..."></textarea>
+
+      <label>
+        <input type="checkbox" name="terminos" required /> Acepto los términos y condiciones.
+      </label>
+
+      <button type="submit" class="btn btn-primary" aria-label="Enviar formulario de contacto">Enviar</button>
+    </form>
   </section>
--->
- <!-- ubicación -->
-  <section class="contacto">
-<section id="ubicacion">
-  <div class="mapa">
-    <h2>Mi Ubicación</h2>
+
+  <!-- Ubicación -->
+  <section id="ubicacion">
     <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.5862283252545!2d-70.58656402442254!3d-33.46008507338576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfc8ee0714d1%3A0x9b8a8f36a39b468b!2sAlcalde%20Eduardo%20Castillo%20Velasco%204498%2C%20%C3%91u%C3%B1oa%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1748958001824!5m2!1ses-419!2scl" 
-      width="600" 
-      height="450" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>   
+      <h2>Mi Ubicación</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.5862283252545!2d-70.58656402442254!3d-33.46008507338576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfc8ee0714d1%3A0x9b8a8f36a39b468b!2sAlcalde%20Eduardo%20Castillo%20Velasco%204498%2C%20%C3%91u%C3%B1oa%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1748958001824!5m2!1ses-419!2scl"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Mapa de ubicación de Pablo Mora"
+      ></iframe>
     </div>
-  </div>
-</section>
-</section>
-<br>
-</body>
-</html>
- <link rel="stylesheet" href="/CSS/contacto.css">
+  </section>
 
-
+  <!-- Pie de página -->
   <footer>
     <p>&copy; 2025 Pablo Mora González. Todos los derechos reservados.</p>
   </footer>

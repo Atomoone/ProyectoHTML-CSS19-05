@@ -1,5 +1,15 @@
 let carrito = [];
 
+// === Cargar carrito desde localStorage al iniciar ===
+window.addEventListener('DOMContentLoaded', () => {
+  const carritoGuardado = localStorage.getItem('carrito');
+  if (carritoGuardado) {
+    carrito = JSON.parse(carritoGuardado);
+    actualizarCarrito();
+  }
+});
+
+// === Agregar producto al carrito ===
 function agregarAlCarrito(nombre, precio) {
   const productoExistente = carrito.find(p => p.nombre === nombre);
   if (productoExistente) {
@@ -7,19 +17,30 @@ function agregarAlCarrito(nombre, precio) {
   } else {
     carrito.push({ nombre, precio, cantidad: 1 });
   }
+  guardarCarrito();
   actualizarCarrito();
 }
 
+// === Eliminar producto del carrito con confirmación ===
 function eliminarDelCarrito(nombre) {
-  carrito = carrito.filter(p => p.nombre !== nombre);
-  actualizarCarrito();
+  if (confirm(`¿Deseas eliminar "${nombre}" del carrito?`)) {
+    carrito = carrito.filter(p => p.nombre !== nombre);
+    guardarCarrito();
+    actualizarCarrito();
+  }
 }
 
+// === Actualizar visual del carrito y precios ===
 function actualizarCarrito() {
   const lista = document.getElementById('carrito-lista');
-  lista.innerHTML = '';
+  const subtotalEl = document.getElementById('subtotal');
+  const ivaEl = document.getElementById('iva');
+  const totalEl = document.getElementById('total');
+  const cantidadEl = document.getElementById('cantidad-items');
 
+  lista.innerHTML = '';
   let subtotal = 0;
+  let cantidadTotal = 0;
 
   carrito.forEach(p => {
     const item = document.createElement('li');
@@ -28,26 +49,40 @@ function actualizarCarrito() {
       <button onclick="eliminarDelCarrito('${p.nombre}')">Eliminar</button>
     `;
     lista.appendChild(item);
+
     subtotal += p.precio * p.cantidad;
+    cantidadTotal += p.cantidad;
   });
 
   const iva = subtotal * 0.19;
   const total = subtotal + iva;
 
-  document.getElementById('subtotal').textContent = `Subtotal: $${subtotal.toLocaleString()}`;
-  document.getElementById('iva').textContent = `IVA (19%): $${iva.toLocaleString()}`;
-  document.getElementById('total').textContent = `Total: $${total.toLocaleString()}`;
+  subtotalEl.textContent = `Subtotal: $${subtotal.toLocaleString()}`;
+  ivaEl.textContent = `IVA (19%): $${iva.toLocaleString()}`;
+  totalEl.textContent = `Total: $${total.toLocaleString()}`;
+  if (cantidadEl) {
+    cantidadEl.textContent = `Productos en carrito: ${cantidadTotal}`;
+  }
 }
 
+// === Guardar carrito en localStorage ===
+function guardarCarrito() {
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+// === Finalizar compra y limpiar carrito ===
 function finalizarCompra() {
   if (carrito.length === 0) {
     alert('El carrito está vacío.');
     return;
   }
+
   alert('Redirigiendo a Webpay... (simulado)');
   carrito = [];
+  guardarCarrito();
   actualizarCarrito();
 }
+
 
 
 

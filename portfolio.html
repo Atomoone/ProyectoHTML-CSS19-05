@@ -2,13 +2,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio - Mi Portafolio</title>
-  <link rel="stylesheet" href="CSS/portafolio.css">
+  <link rel="stylesheet" href="CSS/portafolio.css" />
 </head>
 <body>
+  <!-- Fondo animado -->
   <div class="background"></div>
+
+  <!-- Barra de navegación -->
   <header>
     <nav class="navbar">
       <ul>
@@ -22,34 +25,41 @@
       </ul>
     </nav>
   </header>
- <main class="container">
+
+  <!-- Contenido principal -->
+  <main class="container">
     <h1>Mi Portafolio</h1>
+
+    <!-- Galería de proyectos -->
     <div class="gallery">
       <div class="gallery-item">
-        <img src="Imagen/proyecto1.jpg" alt="Proyecto 1">
+        <img src="Imagen/proyecto1.jpg" alt="Proyecto Web Power BI" />
         <div class="description">Proyecto Web Power BI</div>
-    </div>
+      </div>
+
       <div class="gallery-item">
-        <img src="Imagen/proyecto2.jpg" alt="Proyecto 2">
+        <img src="Imagen/proyecto2.jpg" alt="App Móvil Android" />
         <div class="description">App Móvil Android</div>
       </div>
+
       <div class="gallery-item">
-        <img src="Imagen/proyecto33.jpg" alt="Proyecto 3">
-      <div class="description">Proyecto Web Qlikview</div>
-           </div>
+        <img src="Imagen/proyecto33.jpg" alt="Proyecto Web Qlikview" />
+        <div class="description">Proyecto Web Qlikview</div>
+      </div>
+
       <div class="gallery-item">
-        <img src="Imagen/desarrolloweb.jpg" alt="Proyecto 4">
-      <div class="description">Desarrollo Web</div>
-          <!-- Más proyectos -->
+        <img src="Imagen/desarrolloweb.jpg" alt="Desarrollo Web" />
+        <div class="description">Desarrollo Web</div>
+      </div>
     </div>
-  </main>
-      <main class="container">
+
+    <!-- Lista de proyectos adicionales -->
     <section>
       <h2>Mis Proyectos</h2>
       <ul>
         <li>
           <h3>Proyecto Web HTML5 y Github</h3>
-          <p style="text-align: justify;">Desarrollar de una SPA moderna usando React, React Router y TailwindCSS.</p>
+          <p style="text-align: justify;">Desarrollar una SPA moderna usando React, React Router y TailwindCSS.</p>
         </li>
         <li>
           <h3>Aplicación Móvil Flutter</h3>
@@ -61,22 +71,24 @@
         </li>
         <li>
           <h3>Análisis de Datos con Python</h3>
-          <p style="text-align: justify;">Realizar análisis y visualización de datos usando pandas y MongoBD.</p>
+          <p style="text-align: justify;">Realizar análisis y visualización de datos usando pandas y MongoDB.</p>
         </li>
-        <!-- Agrega más ítems según tu experiencia -->
       </ul>
     </section>
-  
   </main>
+
   <!-- Modal para imagen ampliada -->
-<div id="modal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modal-img">
-</div>
+  <div id="modal" class="modal">
+    <span class="close" aria-label="Cerrar imagen">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Vista ampliada del proyecto" />
+  </div>
+
+  <!-- Script para funcionalidad del modal -->
   <script src="JS/portafolio.js"></script>
- </body>
-<footer>
-  <p>&copy; 2025 Pablo Mora González. Todos los derechos reservados.</p>
-</footer>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Pablo Mora González. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
